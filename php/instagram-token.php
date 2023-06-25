@@ -6,7 +6,7 @@ header('Content-Type: application/json');
 if ($_SERVER['REQUEST_METHOD'] !== 'GET')
     die;
 
-$client_secret = '7ba244ed42fa4a31fe974e1a812dcb08'; //ADD YOUR INSTAGRAM SECRET ID HERE
+$client_secret = ''; //ADD YOUR INSTAGRAM SECRET ID HERE
 
 $client_app_id = isset($_GET['client_app_id']) ? $_GET['client_app_id'] : null;
 $redirect_uri = isset($_GET['redirect_uri']) ? $_GET['redirect_uri'] : null;

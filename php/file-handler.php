@@ -1,7 +1,7 @@
 <?php
 
 $uploads_dir = '../uploads'; //define the path to the uploads folder
-$uploads_dir_url = 'https://radykal.dep/fpd-js-server/uploads'; //define the public url of the uploads folder
+$uploads_dir_url = 'https://yourdomain.comm/uploads'; //define the public url of the uploads folder
 
 header("Access-Control-Allow-Headers: *");
 header("Access-Control-Allow-Origin: *");
