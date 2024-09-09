@@ -327,8 +327,6 @@ class FPD_Svg_Handler {
 
 		$content = substr( $content, $start, ( $end - $start + 6 ) );
 
-		// Make sure to Disable the ability to load external entities
-		$libxml_disable_entity_loader = libxml_disable_entity_loader( true );
 		// Suppress the errors
 		$libxml_use_internal_errors = libxml_use_internal_errors( true );
 
@@ -351,7 +349,6 @@ class FPD_Svg_Handler {
 		$sanitized = $this->svg_dom->saveXML( $this->svg_dom->documentElement, LIBXML_NOEMPTYTAG );
 
 		// Restore defaults
-		libxml_disable_entity_loader( $libxml_disable_entity_loader );
 		libxml_use_internal_errors( $libxml_use_internal_errors );
 
 		return $sanitized;
